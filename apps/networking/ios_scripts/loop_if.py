@@ -17,7 +17,7 @@ b = int (input('Enter last loopback in range : ')) + 1
 # Create a session using paramiko class
 SESSION = paramiko.SSHClient() 
 
-# Ad the device certificate on the client
+# Add the device certificate on the client
 SESSION.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 # Set the connection parameters
