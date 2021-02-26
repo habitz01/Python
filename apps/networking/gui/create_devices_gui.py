@@ -80,7 +80,7 @@ def create_devices_gui():
 
  #   accept_button=Button(bottom_frame, text="Accept")
     #print ("Hostname: ", hostname.get(), "IP: ", ip.get())
-    accept_button=Button(bottom_frame, text="Accept", command=lambda:accept)
+    accept_button=Button(bottom_frame, text="Accept", command=accept)
     accept_button.grid(row=1, column=0, sticky="e", padx=10, pady=10)
 
 
