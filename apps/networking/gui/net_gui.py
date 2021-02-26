@@ -3,6 +3,7 @@ from tkinter import * # for UI
 from tkinter import messagebox
 from db.db_devices import *
 from ios_scripts.sh_ip_int import *
+from gui.create_devices_gui import *
 
 
 
@@ -39,7 +40,7 @@ def gui():
 
     devices_menu=Menu(menu_bar,tearoff=0)
     devices_menu.add_command(label="Create Devices DB", command=db_create)
-    devices_menu.add_command(label="Create Device")
+    devices_menu.add_command(label="Create Device", command=create_devices_gui)
     devices_menu.add_command(label="List Device")
 
     commands_menu=Menu(menu_bar,tearoff=0)
