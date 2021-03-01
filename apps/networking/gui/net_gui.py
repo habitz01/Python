@@ -1,4 +1,3 @@
-
 from tkinter import * # for UI
 from tkinter import messagebox
 from db.db_devices import *
@@ -113,6 +112,9 @@ def gui():
     command1_button.grid(row=1, column=0, sticky="e", padx=10, pady=10)
 
     command2_button=Button(bottom_frame, text="Show Int Status")
-    command2_button.grid(row=1, column=2, sticky="e", padx=10, pady=10)
+    command2_button.grid(row=1, column=1, sticky="e", padx=10, pady=10)
+
+    clear_button=Button(bottom_frame, text="Clear", command=clear)
+    clear_button.grid(row=1, column=2, sticky="e", padx=10, pady=10)
 
     root.mainloop()
