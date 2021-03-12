@@ -4,7 +4,7 @@ import time
 
 from getpass import getpass
 
-def sh_int_status():
+def sh_ip_int_brief():
 
     # ip = input('Enter IP: ')
     # username = input('Enter username: ')
@@ -39,9 +39,13 @@ def sh_int_status():
 
     # Receive the output of the command
     output = DEVICE_ACCESS.recv(65000)
+    output_ascii = output.decode('ascii')
 
     # Print the output
-    print (output.decode('ascii'))
+    #print (output_ascii)
 
     # Close the session
     SESSION.close
+
+    # Return output
+    return output_ascii

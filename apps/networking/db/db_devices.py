@@ -12,10 +12,10 @@ def db_create():
 
     try:
         db_cursor.execute('''
-            CREATE TABLE DEVICES(
-            ID INTEGER PRIMARY KEY AUTOINCREMENT,
-            HOSTNAME VARCHAR(50),
-            IP VARCHAR(15))
+            CREATE TABLE devices(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            hostname VARCHAR(50),
+            ip VARCHAR(15))
             ''')
         messagebox.showinfo("DB", "DB successfully created")
     except:
@@ -23,7 +23,8 @@ def db_create():
 
 ### Create Device
 
-def device_create(self, hostname, ip):
+def device_create(hostname, ip):
+
     db_connection=sqlite3.connect("devices")
     
     db_cursor=db_connection.cursor()
@@ -32,6 +33,6 @@ def device_create(self, hostname, ip):
         db_cursor.execute(" INSERT INTO DEVICES VALUES(MULL, '" + hostname + 
         "','" + ip + "')")
 
-        messagebox.showinfo("DB", "DB successfully created")
+        messagebox.showinfo("DB", "Device successfully created")
     except:
-        messagebox.showinfo("DB", "DB already exist")
+        messagebox.showinfo("DB", "Device was not created")
